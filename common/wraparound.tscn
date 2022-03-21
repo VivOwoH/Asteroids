@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://common/wraparound.gd" type="Script" id=1]
+
+[node name="wraparound" type="Node"]
+script = ExtResource( 1 )

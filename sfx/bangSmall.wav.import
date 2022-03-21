@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bangSmall.wav-20faa3365bf44c3f60d40e298de4b61c.sample"
+
+[deps]
+
+source_file="res://sfx/bangSmall.wav"
+dest_files=[ "res://.import/bangSmall.wav-20faa3365bf44c3f60d40e298de4b61c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

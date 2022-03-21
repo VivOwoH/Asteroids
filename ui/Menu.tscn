@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://ui/deault_theme.tres" type="Theme" id=1]
+[ext_resource path="res://ui/quit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ui/continue.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/fonts/PressStart2P-vaV7.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://ui/newGame.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/sprites/background.jpeg" type="Texture" id=8]
+[ext_resource path="res://ui/Menu.gd" type="Script" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+extra_spacing_char = 10
+font_data = ExtResource( 4 )
+
+[node name="Menu" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="TextureRect2" type="TextureRect" parent="background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Asteroids" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="large" type="Node" parent="Asteroids"]
+
+[node name="small" type="Node" parent="Asteroids"]
+
+[node name="title" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -230.0
+margin_top = -157.0
+margin_right = 255.0
+margin_bottom = -112.0
+custom_fonts/font = SubResource( 1 )
+text = "ASTEROIDS"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -130.0
+margin_top = -55.0
+margin_right = 131.0
+margin_bottom = 145.0
+custom_constants/separation = 35
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="newGame" parent="VBoxContainer" instance=ExtResource( 5 )]
+pause_mode = 2
+next_scene_path = "res://Game_scene.tscn"
+
+[node name="continue" parent="VBoxContainer" instance=ExtResource( 3 )]
+
+[node name="quit" parent="VBoxContainer" instance=ExtResource( 2 )]
