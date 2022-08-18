@@ -1,2 +1,2 @@
 # Asteroids
-Godot Asteroids Project (code modified from USYD INFO1110 coursework)
+Godot Asteroids game (code adapted from USYD 2021_s2 coursework)
